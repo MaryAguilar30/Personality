@@ -42,16 +42,18 @@ class QuestionViewController: UIViewController {
    ]
     
     var questionIndex = 0
+    var answerChosen = [Answer] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
     }
     func updateUI(){
-        singleStackVie.isHidden = true
+        singleStackView.isHidden = true
         multipleStackView.isHidden = true
+        rangedStackView.isHidden = true
         navigationItem.title = "Question #\ (questionIndex + 1)"
         
-        let currentQustion = questions 
+        let currentQuestion = questions 
     }
 }
