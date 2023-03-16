@@ -25,7 +25,7 @@ struct Answer{
 
 enum AnimalType: Character{
     case dog = "🐶" , cat = "🐱", rabbit = "🐰", turtle = "🐢"
-}
+
 
 
 var definition: String {
@@ -38,5 +38,6 @@ var definition: String {
         return "Amas todo lo que sea suave. Eres saludable y esta lleno de energìa."
     case.turtle:
         return "Eres màs sabio que la edad que tiene y te concentras en los detalles.De forma lenta y constante ganaras la carrera."
+       }
     }
 }
