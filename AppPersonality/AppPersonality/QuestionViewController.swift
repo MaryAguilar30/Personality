@@ -52,8 +52,29 @@ class QuestionViewController: UIViewController {
         singleStackView.isHidden = true
         multipleStackView.isHidden = true
         rangedStackView.isHidden = true
-        navigationItem.title = "Question #\ (questionIndex + 1)"
+        navigationItem.title = "Question #\(questionIndex+1)"
         
         let currentQuestion = questions 
+        let currentAnswer = currentQuestion.answer
+        let totalProgress = Float (questionIndex) / Float (questions.count)
+        
+        questionLabel.text = currentQuestion.text
+        questionProgressView.setProgress(totalProgress , animated: true)
+        
+        switch currentQuestion.type{
+            case.single:
+            updateSingleStack(using: currentAnswers)
+               case.multiple:
+            updateMultipleStack(using: currentAnswers)
+               case.ranged:
+            updateRangedStack(using: currentAnswers)
+            
+        }
+        
+    }
+    
+    func updateSingleStack(using answers : [Answer] {
+        singleStackView.isHidden = false 
+        
     }
 }
