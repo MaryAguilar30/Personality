@@ -13,6 +13,26 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        calculatePersonalityResult()
+        navigationItem.hidesBackButton = true
+    }
+    
+    func calculatePersonalityResult(){
+        var frequencyOfAnswers: [AnimalType: Int] = [:]
+        let responseTypes:  responses.map{ $0.type }
+        
+        for response in responseType{
+            frequencyOfAnswers[response] = (frequencyOfAnswers[response] ?? 0 + 1
+            } 
+            
+        for response in responseTypes{
+            frequencyOfAnswers[response] = {frequencyOfAnswers.sorted(by:
+               {(pair1, pair2) -> Bool in
+                return pair1.value > pair2.value
+                                                                      
+        })
+                                 
+                            
     }
     
 
